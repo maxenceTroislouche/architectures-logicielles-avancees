@@ -11,7 +11,8 @@ import java.util.Locale
 import java.text.NumberFormat
 
 class ProductAdapter(
-    private val products: List<Product>
+    private val products: List<Product>,
+    private val onProductClicked: (product: Product) -> Unit,
 ): RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.product_item, parent, false)
@@ -36,6 +37,9 @@ class ProductAdapter(
             statusView.text = itemView.context.getString(statusStringRes)
             val priceFormatter = NumberFormat.getCurrencyInstance(Locale.FRANCE)
             priceView.text = priceFormatter.format(product.price)
+            itemView.rootView.setOnClickListener {
+                onProductClicked(product)
+            }
         }
     }
 }

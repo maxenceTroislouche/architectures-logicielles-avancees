@@ -106,7 +106,12 @@ object ProductDataSource {
             category = "Accessoires"
         )
     )
+
     fun getProducts(): List<ProductDto> {
         return products
+    }
+
+    fun getProductById(id: UUID): ProductDto? {
+        return products.find { it.id == id }
     }
 }
