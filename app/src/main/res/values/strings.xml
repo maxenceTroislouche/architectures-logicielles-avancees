@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyEcommerceApp</string>
+    <!-- Product list -->
+    <string name="available">Disponible</string>
+    <string name="unavailable">Indisponible</string>
+    <string name="dot_string">.</string>
+    <string name="details">Details</string>
+</resources>
