@@ -12,7 +12,7 @@ import java.util.UUID
 const val PRODUCT_ID_EXTRA_KEY = "PRODUCT_ID"
 
 class ProductDetailsActivity : AppCompatActivity() {
-    lateinit var binding: ActivityProductDetailsBinding
+    private lateinit var binding: ActivityProductDetailsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
